@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+</title>
+    <style>
+        #deeeetail[open]{
+            background-color: aquamarine;
+            background-image: linear-gradient(135deg,aquamarine 0%,snow 50%,gold 100%);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li>
+                <p>progress vs meter</p>
+                <progress value="80" min="0" max="100"></progress><br>
+                <meter min="0" max="100" optimum="15" value="80" low="20" high="60"></meter>
+            </li>
+            <li>
+                <p>클릭하면 글 숨김&보기</p>
+                <details id="deeeetail">
+                    <summary>문제1 생각해보고 클릭하세요</summary>
+                    <span>It's ANSWER1.</span>
+                </details>
+            </li>
+            <li>
+                <p>날짜 선택</p>
+                <input type="week" name="" id="">
+            </li>
+            <li>
+                <p>그림 넣을때 최강자</p>
+                <picture>
+                    <source srcset="https://picsum.photos/200/300?random=1" media="(min-width:500px)">
+                    <source srcset="https://picsum.photos/200/300?random=2" media="(min-width:900px)">
+                    <source srcset="https://picsum.photos/200/300?random=3" media="(min-width:1200px)">
+                    <!-- 이하 default + source 미지원경우: -->
+                    <img src="https://picsum.photos/200/300?random=4" alt="">
+                </picture>
+            </li>
+            <li>
+                <p>검색 자동완성 기능</p>
+                <label for="movie">What's your favourite movie?</label><input type="text" list="movies-list">
+                <datalist id="movies-list">
+                    <option value="로마의 휴일"></option>
+                    <option value="트와일라잇 사가 시리즈"></option>
+                    <option value="헝거게임 시리즈"></option>
+                    <option value="마블 시리즈"></option>
+                    <option value="디즈니 시리즈"></option>
+                    <option value="국제시장"></option>
+                </datalist>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
